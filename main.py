@@ -113,7 +113,7 @@ def parse_municipality_results(url: str) -> dict:
     envelopes = text_to_int(soup.find("td", {"headers": "sa3"}).get_text())
     valid = text_to_int(soup.find("td", {"headers": "sa6"}).get_text())
 
-     # The "sb3" part of the header selects vote counts, not percentages.
+    # The "sb3" part of the header selects vote counts, not percentages.
     vote_cells = soup.find_all(
         "td", {"headers": ["t1sa2 t1sb3", "t2sa2 t2sb3"]}
     )
@@ -132,7 +132,7 @@ def parse_municipality_results(url: str) -> dict:
 
 def build_header(party_names: list[str]) -> list[str]:
     """Build the CSV header: fixed columns plus all party names."""
-    return ["code", "name", "registered", "envelopes", "valid"] + party_names
+    return ["code", "location", "registered", "envelopes", "valid"] + party_names
 
 
 def write_csv(filename: str, header: list[str], rows: list[list]) -> None:
