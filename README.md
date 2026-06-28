@@ -23,6 +23,21 @@ of the output file:
 
 python main.py <district_URL> <output_file.csv>
 
+## Finding the district URL
+
+The first argument must be a district listing page (a "ps32" URL
+showing a list of municipalities). To find it:
+
+1. Open https://www.volby.cz/pls/ps2017nss/ps3?xjazyk=CZ
+2. Pick a region (kraj).
+3. In the district table, click the "X" symbol in the
+   "Výběr okrsku" column for the district you want.
+4. You are now on the municipality list page — copy this URL.
+
+A valid URL contains "ps32" and shows many municipalities. Do not
+use a "ps311" detail page (a single municipality) — the program
+reads those automatically.
+
 ## Example
 
 A concrete example for the district of Prostějov:
