@@ -54,7 +54,7 @@ Processing: Bílovice-Lutotín
 
 Saved 97 municipalities to results_prostejov.csv
 
-The output CSV contains one row per municipality: code, name,
+The output CSV contains one row per municipality: code, location,
 registered voters, envelopes, valid votes, and a column for each
 candidate party.
 
